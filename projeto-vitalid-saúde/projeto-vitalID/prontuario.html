@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalid Prontuário Eletrônico</title>
+
+    <style>
+    *{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'segoe UI',sans-serif;
+}
+    body{background-color: #f0f2f5;
+    color: #1c1e21;
+}
+   nav{background-color: #0056b3;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px
+    rgba(0,0,0,0,1);
+} 
+  .card{background:white;
+     border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px
+rgba(0,0,0,0,05);
+     margin-bottom: 1.5rem;
+}
+.header-prontuario
+    {border-bottom: 2px  solid #e9ecef;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.info-item label {
+    display:block;
+    font-size: 0,8rem;
+    color: #65676b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.info-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+th{
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #4b4f56;
+    border-bottom: 2px solid #dee2e6
+}
+td{
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+.status-badge{
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+.status-bom{background: #d4edda;
+    color: #155724;}
+.actions{
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}    
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-print{background: #6c757d;
+    color: white;}
+.btn-update{background: #28a745;
+    color: white;}
+
+.btn-sair{margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-sair:hover{
+    background-color: white;
+    color: #0056b3;
+}  
+ nav{display: plex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .search-container{
+    display: flex;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+ }   
+ #search-input{
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+ }
+ .btn-search{
+    padding: 8px 15px;
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .btn-search:hover{
+    background-color: #002752;
+ }
+</style>
+</head>
+<body>
+    <nav>
+      <div class="nav-brand">
+    <h1>vitalID</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text"
+    placeholder="Buscar paciente por CPF ou nome..."id="search-input">
+    <button type="button"
+class="btn-search">Buscar</button>
+    </div>
+
+    <div class="nav-user"
+    <span>profisional:DR:Miguel </span>
+    <a href="login.html"
+    class="btn-sair">Sair do Sistema</a>
+    </div>
+    </nav>
+    
+    <div class="main-container">
+      <div class="header-prontuario">
+        <h2>Dado do Paciente</h2>
+        <span class="status-badge
+    status-bom">Sinais Estáveis</span>
+    </div>
+    <div class="info-grid">
+      <div class="info-item">
+        <label>Paciente</label>
+        <p>Sofia</p>
+      </div>
+        <div class="info-item">
+         <label>Nascimento</label>
+         <p>22/10/1988</p>
+        </div>
+    <div class="info-item">
+        <label>Tipo Sanguineo</label>
+        <p>O+</p>
+   </div>
+   <div class="info-item">
+    <label>Alergias</label>
+    <p>Dipirona,Poeira</p>
+  </div>
+ </div>
+</div>
+<div class="card">
+    <div class="header-prontuario">
+        <h2>Histórico de Consultas</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Procedimento</th>
+                <th>Responsável</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/10/2025</td>
+                <td>Triagem COVID-19</td>
+                <td>ENf.Fabiola</td>
+                <td>Negativo</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="actions">
+        <button class="btn
+    btn-update">Nova Evolução</button>
+        <button class="btn
+        btn-print">Imprimir Prontuário</button> 
+    </button>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoDev-TO/ Gestão de Desenvolminto infantil</title>
+    <style>
+:root{
+    -cor-primaria: #005f73;
+    -cor-secundaria: #0a9396;
+    -cor-alerta: #ee9b00;
+    -cor-sucesso: #94d2bd;
+    -cor-fundo: #e9d8a6
+}    
+body{font-family:Arial,Helvetica,
+ sans-serif;
+    background-color:
+ var(-cor-fundo);
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color:
+  var(-cor-primaria);
+    color:white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px
+    rgba(0,0,0,0,2);
+}
+main{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color:whiter;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px
+rgba(0,0,0,0,1);    
+}
+h2{
+    color:var(-cor-primaria);
+    border-bottom: 2px solid
+  var(-cor-secundaria);
+  padding-bottom: 5px;  
+}
+.secao-calculo{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 15px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+.campo{
+    display:flex;
+    flex-direction: colomn;
+    flex: 1 1 200px
+}
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 20px
+}
+th{
+    background-color: 
+var(-cor-secundaria);
+color: white;
+padding: 10px;
+text-align: left;
+}
+td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.badge{
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.bg-sucesso{background-color:
+#27ae60;}
+.bg-alerta{background-color: #f39c12;}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #555;
+}
+  </style>
+</head>
+<body>
+ <header>
+    <h1>NeoDev-TO</h1>
+    <p>Monitoramento de Marcos do Desenvolminto infantil</p>
+ </header>   
+ <main>
+    <section>
+        <h2>Avaliação de Idade Corrigida</h2>
+     <div class="secao-calculo">
+        <div class="campo">
+            <label>Data de Nascimento</label>
+            <input type="date">
+        </div>
+        <div class="campo">
+            <label>IG(Semanas de Gestação):</label>
+            <input type="text"placeholder="Resultado aparecerá aqui"disabled>
+        </div>
+     </div>   
+    </section>
+
+    <section>
+        <h2>Marcos do Desenvolvimento(MDI)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Habilidade /Marcos</th>
+                    <th>Idade Esperada</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Seguir objetos com o olhar</td>
+                    <td>1 mês</td>
+                    <td><span class="badge bg-sucesso">Alcançado</span>
+                        <td>Alcançar brinquedos</td>
+                        <td>4 meses</td>
+                        <td><span class="badge bg-alerta">Em Vigilância</span></td>
+
+                        </td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+ </main>
+ <footer>Desenvolvido por Jandeson Alves / inspirado  nos estudos de Terapia Ocupacional</footer>
+</body>
+</html>
